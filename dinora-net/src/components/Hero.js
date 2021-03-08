@@ -32,13 +32,23 @@ function Hero() {
             </DropdownButton>
         </div>
 
-        <div className='btns'>
-            <Button variant="outline-light" block>you send $100</Button>
-            <Button variant="outline-light" block>they get $100</Button>
-            <Button variant="light" block>Get Started</Button>
+        <div className='btns-container'>
+            <div className='buttn'>
+                <Button variant="outline-light" block>you send $100</Button>
+            </div>
+            <div className='buttn'>
+                <Button variant="outline-light" block>they get $100</Button>
+            </div>
+            <div className='buttn'>
+                <Button variant="light" block>Get Started</Button>
+            </div>
         </div>
     </div>
   );
 }
+
+
+            
+            
 
 export default Hero;

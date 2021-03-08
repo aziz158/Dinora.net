@@ -131,14 +131,22 @@
     justify-content: center;
 }
 
-.btns{
+.btns-container{
     color:#fff;
     position: absolute;
-    height: 150px;
-    width: 150px;
-    top: 50px;
+    height: 240px;
+    width: 270px;
+    top: 5px;
     margin: 20px;
-    right: 50px;
+    right: 10px;
     align-items: center;
     justify-content: center;
+}
+
+.buttn{
+    color: #fff;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    
 }
