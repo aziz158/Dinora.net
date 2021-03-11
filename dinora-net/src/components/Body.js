@@ -1,19 +1,27 @@
+// eslint-disable-next-line
 import React, { useMemo, useState, useEffect } from "react";
 import './Body.css';
 import Table from "./Table";
+// eslint-disable-next-line
 import axios from 'axios';
+import MOCK_DATA from './TempServer.json'
 
 function Body() {
   // data state to store the TV Maze API data. Its initial value is an empty array
-  const [data, setData] = useState([]);
+  // TO TRANSFER OVER TO AN ONLINE DB, UNCOMMENT FOLLOWING LINE
+  //const [data, setData] = useState([]);
+
 
   // Using useEffect to call the API once mounted and set the data
-  useEffect(() => {
-    (async () => {
-      const result = await axios("https://api.tvmaze.com/search/shows?q=snow");
-      setData(result.data);
-    })();
-  }, []);
+  // TO TRANSFER OVER TO AN ONLINE DB, UNCOMMENT LINES 14-21
+  // useEffect(() => {
+  //   getData();
+  //   (async () => {
+  //     const result = await axios("https://api.tvmaze.com/search/shows?q=snow");
+  //     console.log(result);
+  //     setData(result.data);
+  //   })();
+  // }, []);
 
   /* 
     - Columns is a simple array right now, but it will contain some logic later on. It is recommended by react-table to memoize the columns data
@@ -23,45 +31,52 @@ function Body() {
       () => [
         {
           // first group - TV Show
-          Header: "TV Show",
+          Header: "Matches",
           // First group columns
           columns: [
             {
-              Header: "Name",
-              accessor: "show.name"
+              Header: "Pic",
+              accessor: "entry.pic"
             },
             {
-              Header: "Type",
-              accessor: "show.type"
+              Header: "Name",
+              accessor: "entry.name"
+            },
+            {
+              Header: "City From",
+              accessor: "entry.cityfrom"
             }
           ]
         },
         {
           // Second group - Details
-          Header: "Details",
+          Header: "Info",
           // Second group columns
           columns: [
             {
-              Header: "Language",
-              accessor: "show.language"
+              Header: "City To",
+              accessor: "entry.cityto"
             },
             {
-              Header: "Genre(s)",
-              accessor: "show.genres"
+              Header: "Offering",
+              accessor: "entry.money1"
             },
             {
-              Header: "Runtime",
-              accessor: "show.runtime"
+              Header: "Requesting",
+              accessor: "entry.money2"
             },
             {
-              Header: "Status",
-              accessor: "show.status"
+              Header: "Type",
+              accessor: "entry.type"
             }
           ]
         }
       ],
       []
     );
+    
+    // Used for LOCAL DATA
+    const data = useMemo(() => MOCK_DATA, []);
 
 
   return (

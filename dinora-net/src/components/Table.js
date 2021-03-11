@@ -68,14 +68,14 @@ export default function Table({ columns, data }) {
     // Update the state when input changes
     const handleFilterChange = e => {
     const value = e.target.value || undefined;
-    setFilter("show.name", value);
+    setFilter("entry.cityfrom", value);
     // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
     setFilterInput(value);
     };
 
     const handleFilterChangeLang = e => {
         const value = e.target.value || undefined;
-        setFilter("show.language", value); 
+        setFilter("entry.cityto", value); 
         // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
         setFilterInput2(value);
     };
@@ -105,12 +105,12 @@ export default function Table({ columns, data }) {
         <input
         value={filterInput}
         onChange={handleFilterChange}
-        placeholder={"Search name"}
+        placeholder={"Search City From"}
         />
         <input
         value={filterInput2}
         onChange={handleFilterChangeLang}
-        placeholder={"Search language"}
+        placeholder={"Search City To"}
         />
 
         <Styles>
