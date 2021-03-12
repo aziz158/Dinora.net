@@ -103,7 +103,9 @@ export default function Table({ columns, data }) {
     <>
         <div className='upper-half-container'>
           <div className='top-table-container'>
-            
+            {/* PLACEHOLDER */}
+            <h3>Send From: </h3>
+            <h3>Send To: </h3>
           </div>
           <div className='search-boxes-container'>
             <input
