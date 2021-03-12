@@ -24,8 +24,8 @@
         "type": [
           "Cash"
         ],
-        "money1": 2500,
-        "money2": null
+        "money1": null,
+        "money2": 2500
       }
     },
     {
@@ -66,8 +66,8 @@
         "type": [
           "Mobile Transfer"
         ],
-        "money1": 500,
-        "money2": null
+        "money1": null,
+        "money2": 500
       }
     }
   ]

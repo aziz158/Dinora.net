@@ -68,14 +68,14 @@ export default function Table({ columns, data }) {
     // Update the state when input changes
     const handleFilterChange = e => {
     const value = e.target.value || undefined;
-    setFilter("show.name", value);
+    setFilter("entry.cityfrom", value);
     // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
     setFilterInput(value);
     };
 
     const handleFilterChangeLang = e => {
         const value = e.target.value || undefined;
-        setFilter("show.language", value); 
+        setFilter("entry.cityto", value); 
         // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
         setFilterInput2(value);
     };
@@ -101,43 +101,50 @@ export default function Table({ columns, data }) {
   */
   return (
     <>
-        
-        <input
-        value={filterInput}
-        onChange={handleFilterChange}
-        placeholder={"Search name"}
-        />
-        <input
-        value={filterInput2}
-        onChange={handleFilterChangeLang}
-        placeholder={"Search language"}
-        />
-
-        <Styles>
-            <table {...getTableProps()}>
-            <thead>
-                {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map(column => (
-                    <th {...column.getHeaderProps()}>{column.render("Header")}</th>
-                    ))}
-                </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
-                prepareRow(row);
-                return (
-                    <tr {...row.getRowProps()}>
-                    {row.cells.map(cell => {
-                        return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
-                    })}
-                    </tr>
-                );
-                })}
-            </tbody>
-            </table>
-        </Styles>
+        <div className='upper-half-container'>
+          <div className='top-table-container'>
+            
+          </div>
+          <div className='search-boxes-container'>
+            <input
+            value={filterInput}
+            onChange={handleFilterChange}
+            placeholder={"City From"}
+            />
+            <input
+            value={filterInput2}
+            onChange={handleFilterChangeLang}
+            placeholder={"City To"}
+            />
+          </div>
+        </div>
+        <div className='lower-half-container'>
+          <Styles>
+              <table {...getTableProps()}>
+              <thead>
+                  {headerGroups.map(headerGroup => (
+                  <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map(column => (
+                      <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                      ))}
+                  </tr>
+                  ))}
+              </thead>
+              <tbody {...getTableBodyProps()}>
+                  {rows.map((row, i) => {
+                  prepareRow(row);
+                  return (
+                      <tr {...row.getRowProps()}>
+                      {row.cells.map(cell => {
+                          return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+                      })}
+                      </tr>
+                  );
+                  })}
+              </tbody>
+              </table>
+          </Styles>
+        </div>
     </>
   );
 }

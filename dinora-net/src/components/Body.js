@@ -80,8 +80,8 @@ function Body() {
 
 
   return (
-    <div className="container">
-      <div className="Body">
+    <div className="body-container">
+      <div className="body">
         <Table columns={columns} data={data} />
       </div>
     </div>
