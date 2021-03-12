@@ -1,0 +1,73 @@
+[
+    {
+      "entry": {
+        "id": 1,
+        "pic": "",
+        "name": "Makhmud",
+        "cityfrom": "San Francisco",
+        "cityto": "Tashkent",
+        "type": [
+          "Zelle",
+          "Cash Pickup"
+        ],
+        "money1": 9000,
+        "money2": null
+      }
+    },
+    {
+      "entry": {
+        "id": 2,
+        "pic": "",
+        "name": "Shukhrat",
+        "cityfrom": "Andijan",
+        "cityto": "Boston",
+        "type": [
+          "Cash"
+        ],
+        "money1": 2500,
+        "money2": null
+      }
+    },
+    {
+      "entry": {
+        "id": 3,
+        "pic": "",
+        "name": "Juhangir",
+        "cityfrom": "San Jose",
+        "cityto": "Tashkent",
+        "type": [
+          "Cash Pickup"
+        ],
+        "money1": 4000,
+        "money2": null
+      }
+    },
+    {
+      "entry": {
+        "id": 32367,
+        "pic": "",
+        "name": "Shoira",
+        "cityfrom": "Nashville",
+        "cityto": "Tashkent",
+        "type": [
+          "Cash Pickup"
+        ],
+        "money1": 1500,
+        "money2": null
+      }
+    },
+    {
+      "entry": {
+        "id": 32367,
+        "pic": "",
+        "name": "Anonymous",
+        "cityfrom": "Portland",
+        "cityto": "Jizzakh",
+        "type": [
+          "Mobile Transfer"
+        ],
+        "money1": 500,
+        "money2": null
+      }
+    }
+  ]
