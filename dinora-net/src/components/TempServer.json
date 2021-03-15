@@ -5,17 +5,20 @@
         "pic": "",
         "name": "Makhmud",
         "cityfrom": "San Francisco",
+
         "cityto": "Tashkent",
         "type": [
           "Zelle",
           "Cash Pickup"
         ],
+
         "money1": 9000,
         "money2": null
       }
     },
     {
       "entry": {
+
         "id": 2,
         "pic": "",
         "name": "Shukhrat",
@@ -40,6 +43,7 @@
         ],
         "money1": 4000,
         "money2": null
+
       }
     },
     {

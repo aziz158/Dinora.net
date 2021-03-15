@@ -147,6 +147,7 @@ export default function Table({ columns, data }) {
               </table>
           </Styles>
         </div>
+
     </>
   );
 }
