@@ -101,43 +101,53 @@ export default function Table({ columns, data }) {
   */
   return (
     <>
-        
-        <input
-        value={filterInput}
-        onChange={handleFilterChange}
-        placeholder={"Search City From"}
-        />
-        <input
-        value={filterInput2}
-        onChange={handleFilterChangeLang}
-        placeholder={"Search City To"}
-        />
+        <div className='upper-half-container'>
+          <div className='top-table-container'>
+            {/* PLACEHOLDER */}
+            <h3>Send From: </h3>
+            <h3>Send To: </h3>
+          </div>
+          <div className='search-boxes-container'>
+            <input
+            value={filterInput}
+            onChange={handleFilterChange}
+            placeholder={"City From"}
+            />
+            <input
+            value={filterInput2}
+            onChange={handleFilterChangeLang}
+            placeholder={"City To"}
+            />
+          </div>
+        </div>
+        <div className='lower-half-container'>
+          <Styles>
+              <table {...getTableProps()}>
+              <thead>
+                  {headerGroups.map(headerGroup => (
+                  <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map(column => (
+                      <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                      ))}
+                  </tr>
+                  ))}
+              </thead>
+              <tbody {...getTableBodyProps()}>
+                  {rows.map((row, i) => {
+                  prepareRow(row);
+                  return (
+                      <tr {...row.getRowProps()}>
+                      {row.cells.map(cell => {
+                          return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+                      })}
+                      </tr>
+                  );
+                  })}
+              </tbody>
+              </table>
+          </Styles>
+        </div>
 
-        <Styles>
-            <table {...getTableProps()}>
-            <thead>
-                {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map(column => (
-                    <th {...column.getHeaderProps()}>{column.render("Header")}</th>
-                    ))}
-                </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
-                prepareRow(row);
-                return (
-                    <tr {...row.getRowProps()}>
-                    {row.cells.map(cell => {
-                        return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
-                    })}
-                    </tr>
-                );
-                })}
-            </tbody>
-            </table>
-        </Styles>
     </>
   );
 }

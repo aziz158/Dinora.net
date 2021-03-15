@@ -1,59 +1,77 @@
 [
     {
       "entry": {
-        "id": 32367,
-        "pic": "https://www.tvmaze.com/shows/32367/snow-crash",
-        "name": "Eduardo Villa",
-        "cityfrom": "San Jose",
+        "id": 1,
+        "pic": "",
+        "name": "Makhmud",
+        "cityfrom": "San Francisco",
+
         "cityto": "Tashkent",
         "type": [
           "Zelle",
           "Cash Pickup"
         ],
-        "money1": 1000,
-        "money2": null,
-        "image": {
-          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/233/584738.jpg",
-          "original": "https://static.tvmaze.com/uploads/images/original_untouched/233/584738.jpg"
-        }
+
+        "money1": 9000,
+        "money2": null
       }
     },
     {
       "entry": {
-        "id": 32368,
-        "pic": "https://www.tvmaze.com/shows/32367/snow-crash",
-        "name": "Aziz Asomidinov",
-        "cityfrom": "Tashkent",
-        "cityto": "Bay Point",
+
+        "id": 2,
+        "pic": "",
+        "name": "Shukhrat",
+        "cityfrom": "Andijan",
+        "cityto": "Boston",
         "type": [
-          "Zelle",
-          "Cash Pickup"
+          "Cash"
         ],
         "money1": null,
-        "money2": 2000,
-        "image": {
-          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/233/584738.jpg",
-          "original": "https://static.tvmaze.com/uploads/images/original_untouched/233/584738.jpg"
-        }
+        "money2": 2500
       }
     },
     {
       "entry": {
-        "id": 32368,
-        "pic": "https://www.tvmaze.com/shows/32367/snow-crash",
-        "name": "Jahangir Yuldashevich",
-        "cityfrom": "San Francisco",
-        "cityto": "Moscow",
+        "id": 3,
+        "pic": "",
+        "name": "Juhangir",
+        "cityfrom": "San Jose",
+        "cityto": "Tashkent",
         "type": [
-          "Zelle",
           "Cash Pickup"
         ],
+        "money1": 4000,
+        "money2": null
+
+      }
+    },
+    {
+      "entry": {
+        "id": 32367,
+        "pic": "",
+        "name": "Shoira",
+        "cityfrom": "Nashville",
+        "cityto": "Tashkent",
+        "type": [
+          "Cash Pickup"
+        ],
+        "money1": 1500,
+        "money2": null
+      }
+    },
+    {
+      "entry": {
+        "id": 32367,
+        "pic": "",
+        "name": "Anonymous",
+        "cityfrom": "Portland",
+        "cityto": "Jizzakh",
+        "type": [
+          "Mobile Transfer"
+        ],
         "money1": null,
-        "money2": 2900,
-        "image": {
-          "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/233/584738.jpg",
-          "original": "https://static.tvmaze.com/uploads/images/original_untouched/233/584738.jpg"
-        }
+        "money2": 500
       }
     }
   ]
